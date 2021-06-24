@@ -18,14 +18,18 @@
     z-index: 4;
 }
 
-.earth{
+.moon{
     background: url(../images/moon.jpg) no-repeat top center;
     margin: auto;
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 275px;
     border-bottom: 0;
     z-index: 3;
+}
+
+.row{
+    --bs-gutter-x: 0 !important;
 }
 /***********************************/
 
@@ -343,8 +347,109 @@
     left:15px;
 }
 
+/**********************************************/
+.textSkills {
+    margin-top: 20%;
+    text-align: center;
+    align-items: center;
+    z-index: 7;
+
+}
+  
+p {
+    display: inline-block;
+    margin: 0;
+    font-size: 40px;
+    z-index: 7;
+}
+  
+.word {
+    position: absolute;
+    opacity: 0;
+    z-index: 7;
+}
+
+  
+.letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
 
 
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+  
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+  
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  
+.purple {
+    color: #8e44ad;
+}
+  
+.blue {
+    color: #2980b9;
+}
+
+.orange{
+    color: coral;
+}
+.red {
+    color: #c0392b;
+}
+  
+.green {
+    color: #16a085;
+}
+  
+.gray {
+    color:#a6a6a6;
+}
+  
+.yellow {
+    color: #ffd147;
+}
+
+.darkBlue{
+    color: #2980b9;
+}
+
+.blueVB{
+    color: #4775ff;
+}
+
+.redLi{
+    color: crimson;
+}
+
+.blueLi{
+    color: lightblue;
+}
+
+.orangeLi{
+    color: darkorange;
+}
+
+.blueD{
+    color: cadetblue ;
+}
+
+.orangeMy{
+    color: burlywood;
+}
+.midnight{
+    color: darkblue;
+}
 /**********************************************/
 
 .stars, .twinkling {
@@ -393,14 +498,17 @@
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
 }
+
 @-webkit-keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
 }
+
 @-moz-keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
 }
+
 @-ms-keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
