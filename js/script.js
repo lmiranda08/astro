@@ -105,6 +105,58 @@ function splitLetters2(word2) {
   wordArray2.push(letters2);
 }
 
+/*** Skills Mobile***/
+var wordsMobile = document.getElementsByClassName('wordMobile');
+var wordArrayMobile = [];
+var currentWordMobile = 0;
+wordsMobile[currentWordMobile].style.opacity = 1;
+
+for (var i = 0; i < wordsMobile.length; i++) {
+  splitLettersMobile(wordsMobile[i]);
+}
+
+function changeWordMobile() {
+  var cwMobile = wordArrayMobile[currentWordMobile];
+  var nwMobile = currentWordMobile == wordsMobile.length-1 ? wordArrayMobile[0] : wordArrayMobile[currentWordMobile+1];
+  for (var i = 0; i < cwMobile.length; i++) {
+    animateLetterOutMobile(cwMobile, i);
+  }
+
+  for (var i = 0; i < nwMobile.length; i++) {
+    nwMobile[i].className = 'letterMobile behind';
+    nwMobile[0].parentElement.style.opacity = 1;
+    animateLetterInMobile(nwMobile, i);
+  }
+
+  currentWordMobile = (currentWordMobile == wordArrayMobile.length-1) ? 0 : currentWordMobile+1;
+}
+
+function animateLetterOutMobile(cw, i) {
+  setTimeout(function() {
+    cw[i].className = 'letterMobile out';
+  }, i*80);
+}
+
+function animateLetterInMobile(nw, i) {
+  setTimeout(function() {
+    nw[i].className = 'letterMobile in';
+  }, 340+(i*80));
+}
+
+function splitLettersMobile(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letterMobile';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+  
+  wordArrayMobile.push(letters);
+}
 
 changeWord();
 setInterval(changeWord, 4000);
@@ -112,13 +164,13 @@ setInterval(changeWord, 4000);
 changeWord2();
 setInterval(changeWord2, 4000);
 
+changeWordMobile();
+setInterval(changeWordMobile, 4000);
 
 
-/*** Mo ***/
 
-/*
-// function([string1, string2],target id,[color1,color2])    
-consoleText(['Luis Miranda', 'Developer', 'Costa Rica'], 'text',['#16a085','coral','#2980b9']);
+/*** Mobile Personal ***/
+consoleText(['Luis Miranda', 'Developer', 'Costa Rica'], 'text',['#ffd147','coral','darkorange']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
@@ -168,4 +220,3 @@ function consoleText(words, id, colors) {
     }
   }, 400)
 }
-*/

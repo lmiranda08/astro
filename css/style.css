@@ -429,6 +429,54 @@
     transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/*** Skills Mobile***/
+.textSkills3 {
+    font-size: 1em;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 7;
+}
+
+.pRowMobile {
+    margin: 10px;
+    margin-left: -26px;
+    z-index: 7;
+    font-family: 'Lobster', cursive;
+}
+
+.wordMobile {
+    position: absolute;
+    opacity: 0;
+    z-index: 7;
+}
+
+.letterMobile {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+  
+.letterMobile.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+  
+.letterMobile.behind {
+    transform: rotateX(-90deg);
+}
+  
+.letterMobile.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 /*** Colors ***/
 .purple {
     color: #8e44ad;
@@ -518,15 +566,9 @@
   
 /*** Mobile ***/
 
-.pMobile {
-
-}
-
 .console-container {
     font-size:3em;
     text-align:center;
-    height:200px;
-    width:600px;
     display:block;
     position:absolute;
     color:white;
@@ -535,7 +577,8 @@
     left:0;
     right:0;
     margin:auto;
-    margin-top: 30px;
+    margin-top: 85px;
+    font-family: 'Lobster', cursive;
   }
   .console-underscore {
     display:inline-block;
@@ -578,8 +621,6 @@
     to {background-position:-10000px 5000px;}
 }
 
-
-
 @media screen and (min-width: 980px) /* Desktop */ {
     .desktop {
         display: block;
@@ -596,9 +637,8 @@
     }
     .mobile {
         display: block;
-    }
-    .moon{
-        height: 20rem;
+        margin-top: 10px;
+        text-align: center;
     }
 }
   
@@ -608,6 +648,8 @@
     }
     .mobile {
         display: block;
+        margin-top: 10px;
+        text-align: center;
     }
 }
 
