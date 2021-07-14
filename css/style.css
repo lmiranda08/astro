@@ -28,7 +28,7 @@
     flex-direction: column;
     background: url(../images/moon.jpg) no-repeat top center;
     position: relative;
-    height: 23rem;
+    height: 18rem;
     z-index: 3;
 }
 
