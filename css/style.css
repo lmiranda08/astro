@@ -14,8 +14,8 @@
 
 .imageContainer img{
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius:50%;
     transition: .5s;
     margin-bottom: -100px;
@@ -28,7 +28,7 @@
     flex-direction: column;
     background: url(../images/moon.jpg) no-repeat top center;
     position: relative;
-    height: 22rem;
+    height: 23rem;
     z-index: 3;
 }
 
